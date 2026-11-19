@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d342b">
+  <meta name="description" content="Al-Qur'an Digital — baca Al-Qur'an, dengarkan murottal, simpan ayat, dan temukan doa harian.">
+  <title>Al-Qur'an Digital — Nyyyxyz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Al-Qur'an Digital beranda">
+      <span class="brand-mark">۞</span><span><b>Al-Qur'an</b><small>DIGITAL</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <button class="nav-link active" data-page="home">Beranda</button>
+      <button class="nav-link" data-page="quran">Al-Qur'an</button>
+      <button class="nav-link" data-page="doa">Doa Harian</button>
+      <button class="nav-link" data-page="asma">Asmaul Husna</button>
+      <button class="nav-link" data-page="tasbih">Tasbih</button>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeBtn" title="Ganti tema" aria-label="Ganti tema">☾</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="homePage" class="page active">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> TEMAN IBADAH HARIAN</div>
+          <h1>Temukan ketenangan<br>di setiap <em>ayat-Nya.</em></h1>
+          <p>Baca, pahami, dan dengarkan lantunan Al-Qur'an kapan saja. Ruang kecil untuk mendekatkan diri kepada Allah.</p>
+          <div class="hero-actions">
+            <button class="btn btn-light" id="startRead">Mulai membaca <span>↗</span></button>
+            <button class="btn btn-outline-light" id="dailyVerseBtn">Ayat pilihan hari ini</button>
+          </div>
+          <div class="hero-note"><span>✦</span> 114 Surat <i></i> 30 Juz <i></i> 6.236 Ayat</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="moon">☾</div><div class="star star-a">✦</div><div class="star star-b">✧</div>
+          <div class="arch"><div class="arch-inner"><span>﷽</span><small>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</small></div></div>
+          <div class="art-caption">بِالْقُرْآنِ تَطْمَئِنُّ الْقُلُوبُ</div>
+        </div>
+      </div>
+
+      <div class="content-wrap">
+        <div class="welcome-row">
+          <div><div class="section-kicker">ASSALAMUALAIKUM</div><h2>Mulai hari dengan kebaikan.</h2><p class="muted">Semoga setiap ayat yang dibaca membawa keberkahan.</p></div>
+          <div class="date-chip" id="todayDate">Hari ini</div>
+        </div>
+        <div class="quick-grid">
+          <button class="quick-card green-card" data-page="quran"><span class="quick-icon">۞</span><b>Baca Al-Qur'an</b><small>114 surat lengkap</small><span class="quick-arrow">↗</span></button>
+          <button class="quick-card cream-card" data-page="doa"><span class="quick-icon">☼</span><b>Doa Harian</b><small>Doa dalam keseharian</small><span class="quick-arrow">↗</span></button>
+          <button class="quick-card lilac-card" data-page="asma"><span class="quick-icon">✧</span><b>Asmaul Husna</b><small>99 nama Allah</small><span class="quick-arrow">↗</span></button>
+          <button class="quick-card blue-card" data-page="tasbih"><span class="quick-icon">◉</span><b>Tasbih Digital</b><small>Dzikir setiap waktu</small><span class="quick-arrow">↗</span></button>
+        </div>
+        <div class="home-columns">
+          <section class="panel continue-panel">
+            <div class="panel-heading"><div><div class="section-kicker">LANJUTKAN BACAAN</div><h3>Terakhir dibaca</h3></div><span class="tiny-icon">↗</span></div>
+            <div id="lastReadCard" class="last-read"><div class="last-symbol">۞</div><div><b>Belum ada bacaan</b><small>Surat yang kamu baca akan muncul di sini.</small></div><button class="text-btn" id="openLastRead">Buka</button></div>
+          </section>
+          <section class="panel prayer-panel">
+            <div class="panel-heading"><div><div class="section-kicker">JADWAL SALAT</div><h3 id="prayerCity">Jakarta, Indonesia</h3></div><button class="text-btn" id="changeCity">Ubah kota</button></div>
+            <div class="prayer-times" id="prayerTimes"><span>Memuat jadwal…</span></div>
+          </section>
+        </div>
+        <section class="daily-card" id="dailyCard">
+          <div class="daily-label">✦ AYAT PILIHAN</div><div class="daily-arabic" id="dailyArabic">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+          <p id="dailyTranslation">Sesungguhnya bersama kesulitan ada kemudahan.</p>
+          <small id="dailyReference">QS. Al-Insyirah: 6</small>
+          <button class="daily-open" id="openDaily">Baca suratnya ↗</button>
+        </section>
+      </div>
+    </section>
+
+    <section id="quranPage" class="page">
+      <div class="page-heading"><div class="section-kicker">KITAB SUCI AL-QUR'AN</div><h1>Jelajahi <em>Al-Qur'an.</em></h1><p class="muted">Pilih surat dan mulai perjalanan tilawahmu.</p></div>
+      <div class="quran-layout">
+        <aside class="quran-sidebar panel">
+          <div class="search-box"><span>⌕</span><input id="surahSearch" placeholder="Cari nama surat..." autocomplete="off"></div>
+          <div class="filter-row"><button class="filter active" data-filter="all">Semua</button><button class="filter" data-filter="meccan">Makkiyah</button><button class="filter" data-filter="medinan">Madaniyah</button></div>
+          <div id="surahList" class="surah-list"><div class="loading">Memuat daftar surat…</div></div>
+        </aside>
+        <section class="reader panel" id="reader">
+          <div id="readerEmpty" class="reader-empty"><div class="empty-symbol">۞</div><h2>Pilih surat untuk dibaca</h2><p>Daftar surat tersedia di sebelah kiri.</p></div>
+          <div id="readerContent" hidden>
+            <div class="reader-top"><button class="back-list" id="backToList">← Daftar surat</button><span id="surahMeta" class="muted"></span></div>
+            <div class="surah-title"><div class="surah-number" id="readerNumber">01</div><div><h2 id="readerName">Al-Fatihah</h2><p id="readerMeaning">Pembukaan · 7 Ayat</p></div><div class="surah-arabic-name" id="readerArabicName"></div></div>
+            <div class="reader-controls">
+              <label>Qari <select id="qariSelect"><option value="05">Misyari Rasyid Al-Afasi</option><option value="01">Abdullah Al-Juhany</option><option value="02">Abdul Muhsin Al-Qasim</option><option value="03">Abdurrahman As-Sudais</option><option value="04">Ibrahim Al-Dossari</option><option value="06">Yasser Al-Dosari</option></select></label>
+              <button class="btn btn-small" id="playFull">▶ Putar surat</button>
+              <button class="btn btn-small btn-soft" id="stopAudio">■ Stop</button>
+            </div>
+            <audio id="audioPlayer" controls></audio>
+            <div id="ayahList" class="ayah-list"><div class="loading">Memuat ayat…</div></div>
+            <div class="reader-bottom"><button id="prevSurah" class="btn btn-soft">← Surat sebelumnya</button><button id="nextSurah" class="btn">Surat berikutnya →</button></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="doaPage" class="page"><div class="page-heading"><div class="section-kicker">KUMPULAN DOA</div><h1>Doa <em>Harian.</em></h1><p class="muted">Kumpulan doa untuk menemani aktivitas sehari-hari.</p></div><div id="doaList" class="feature-list"><div class="loading">Memuat doa…</div></div></section>
+    <section id="asmaPage" class="page"><div class="page-heading"><div class="section-kicker">99 NAMA ALLAH</div><h1>Asmaul <em>Husna.</em></h1><p class="muted">Mengenal nama-nama Allah yang indah.</p></div><div id="asmaList" class="asma-grid"><div class="loading">Memuat Asmaul Husna…</div></div></section>
+    <section id="tasbihPage" class="page"><div class="page-heading"><div class="section-kicker">DZIKIR & DOA</div><h1>Tasbih <em>Digital.</em></h1><p class="muted">Hitung dzikir dengan tenang dan fokus.</p></div>
+      <div class="tasbih-wrap panel"><div class="tasbih-label">DZIKIR YANG DIPILIH</div><select id="dhikrSelect"><option value="سُبْحَانَ اللَّهِ">سُبْحَانَ اللَّهِ — Subhanallah</option><option value="الْحَمْدُ لِلَّهِ">الْحَمْدُ لِلَّهِ — Alhamdulillah</option><option value="اللَّهُ أَكْبَرُ">اللَّهُ أَكْبَرُ — Allahu Akbar</option><option value="أَسْتَغْفِرُ اللَّهَ">أَسْتَغْفِرُ اللَّهَ — Astaghfirullah</option><option value="لَا إِلَٰهَ إِلَّا اللَّهُ">لَا إِلَٰهَ إِلَّا اللَّهُ — La ilaha illallah</option></select><div class="tasbih-count" id="tasbihCount">0</div><div class="tasbih-target">TARGET <span id="targetNum">33</span></div><div class="target-options"><button class="target active" data-target="33">33</button><button class="target" data-target="99">99</button><button class="target" data-target="100">100</button></div><button class="tasbih-button" id="tasbihTap"><span>◉</span> Ketuk untuk berdzikir</button><button class="reset-btn" id="tasbihReset">↺ Atur ulang</button></div>
+    </section>
+
+    <section id="donatePage" class="page"><div class="page-heading"><div class="section-kicker">DUKUNG PENGEMBANG</div><h1>Donasi <em>seikhlasnya.</em></h1><p class="muted">Jika website ini bermanfaat, kamu dapat mendukung pengembangannya.</p></div>
+      <div class="donate-panel panel"><div class="donate-copy"><div class="donate-icon">♡</div><h2>Dukung Al-Qur'an Digital</h2><p>Donasi bersifat sukarela, tidak wajib. Terima kasih telah membantu pengembangan website ini agar terus bermanfaat.</p><div class="developer">Dikembangkan dengan ♥ oleh <b>Nyyyxyz / Kenny</b></div><a class="channel-link" href="https://whatsapp.com/channel/0029Vb7sYxYHbFV4BleXsV1J" target="_blank" rel="noopener">Ikuti Saluran WhatsApp ↗</a></div><div class="qris-box"><img src="public/qris-donate.jpg" alt="QRIS donasi pengembang"><b>SCAN QRIS UNTUK DONASI</b><small>Nominal sesuai keikhlasan</small></div></div>
+    </section>
+
+    <section id="aboutPage" class="page"><div class="page-heading"><div class="section-kicker">TENTANG WEBSITE</div><h1>Dibuat untuk <em>kebaikan.</em></h1></div><div class="panel about-panel"><div class="about-logo">۞</div><h2>Al-Qur'an Digital</h2><p>Website sederhana untuk membantu membaca dan mempelajari Al-Qur'an dengan lebih mudah. Konten ayat dan terjemahan dimuat dari layanan API pihak ketiga.</p><p><b>Developer:</b> Nyyyxyz / Kenny</p><p><b>Catatan:</b> Jadikan mushaf cetak dan sumber resmi sebagai rujukan utama jika menemukan perbedaan penulisan atau tampilan.</p><a class="channel-link" href="https://whatsapp.com/channel/0029Vb7sYxYHbFV4BleXsV1J" target="_blank" rel="noopener">Ikuti Saluran WhatsApp ↗</a></div></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">۞</span><span><b>Al-Qur'an</b><small>DIGITAL</small></span></a><p>Semoga menjadi jalan kebaikan. <span>© <span id="year"></span> Nyyyxyz</span></p><div class="footer-links"><button data-page="about">Tentang</button><button data-page="donate">Donasi</button><a href="https://whatsapp.com/channel/0029Vb7sYxYHbFV4BleXsV1J" target="_blank" rel="noopener">Saluran WhatsApp ↗</a></div></footer>
+  <div class="mobile-nav"><button data-page="home" class="active"><span>⌂</span>Beranda</button><button data-page="quran"><span>۞</span>Qur'an</button><button data-page="doa"><span>☼</span>Doa</button><button data-page="tasbih"><span>◉</span>Tasbih</button><button data-page="donate"><span>♡</span>Donasi</button></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body></html>
